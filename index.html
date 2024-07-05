@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReactJS Web Page</title>
+  <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #root {
+    padding: 2vw;
+    width: 50%;
+    margin: 10vh auto;
+    /* font-size: 98px; */
+    border: 2px solid forestgreen;
+    box-shadow: 1px 2px 9px black;
+}
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    h2 {
+      font-size: 18px;
+      color: #1a0dab;
+    }
+    a {
+      color: #1a0dab;
+      text-decoration: none;
+    }
+    p {
+      font-size: 14px;
+      color: #333;
+    }
+    section {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+
+    const App = () => {
+      return (
+        <div>
+          <h1>Topics covered</h1>
+          <p>The following is a list of all the topics we cover in the MDN learning area.</p>
+          <section>
+            <h2><a href="#getting-started">Getting started with the web</a></h2>
+            <p>Provides a practical introduction to web development for complete beginners.</p>
+          </section>
+          <section>
+            <h2><a href="#html-structuring">HTML — Structuring the web</a></h2>
+            <p>HTML is the language that we use to structure the different parts of our content and define what their meaning or purpose is. This topic teaches HTML in detail.</p>
+          </section>
+          <section>
+            <h2><a href="#css-styling">CSS — Styling the web</a></h2>
+            <p>CSS is the language that we use to control our web content's style and layout, as well as adding behavior like animation. This topic provides comprehensive coverage of CSS.</p>
+          </section>
+        </div>
+      );
+    };
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+
+  </script>
+</body>
+</html>
